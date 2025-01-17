@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: A client to the LimeSurvey Remote Control API 2, written in modern Python.
 
-
+<h2>Features</h2>
 
 - Supports the full RPC API via the [`Session` class](https://citric.readthedocs.io/en/latest/_api/citric/session/index.html#citric.session.Session).
 - Best effort to implement all the RPC methods in the [`Client` class](https://citric.readthedocs.io/en/stable/_api/citric/index.html#citric.Client). See the [API coverage page](https://citric.readthedocs.io/en/stable/rpc_coverage.html) for details.
@@ -18,21 +18,16 @@ Summary: A client to the LimeSurvey Remote Control API 2, written in modern Pyth
 - Tested against LimeSurvey 6.0.0+ and 5.0.0+ versions.
 - Experimental support for the new [REST API](https://manual.limesurvey.org/REST_API).
 
-
+<h2>Usage</h2>
 
 ```python
 from citric import Client
-
 
 client =  Client(
     "https://mylimesite.limequery.com/admin/remotecontrol",
     "myusername",
     "mypassword",
 )
-
-
-print(client.get_server_version())
-
 
 for survey in client.list_surveys():
     print(survey["surveyls_title"])
