@@ -13,21 +13,12 @@ Development: https://github.com/edgarrmondragon/citric
 
 Documentation: https://citric.readthedocs.io/
 
-Usage
-=====
-
-```python
-from citric import Client
-
-client =  Client(
-    "https://mylimesite.limequery.com/admin/remotecontrol",
-    "myusername",
-    "mypassword",
-)
-
-for survey in client.list_surveys():
-    print(survey["surveyls_title"])
-```
+- Supports the full RPC API via the `Session` class.
+- Best effort to implement all the RPC methods in the `Client` class.
+- Easily export survey data to CSV files, Pandas DataFrames and DuckDB databases.
+- Easily download survey files (e.g. images, audio, etc.) to a local directory.
+- Tested against LimeSurvey 6.0.0+ and 5.0.0+ versions.
+- Experimental support for the new [REST API](https://manual.limesurvey.org/REST_API).
 
 
 Current build status
