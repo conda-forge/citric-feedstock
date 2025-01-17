@@ -9,6 +9,27 @@ Package license: MIT
 
 Summary: A client to the LimeSurvey Remote Control API 2, written in modern Python.
 
+Development: https://github.com/edgarrmondragon/citric
+
+Documentation: https://citric.readthedocs.io/
+
+Usage
+=====
+
+```python
+from citric import Client
+
+client =  Client(
+    "https://mylimesite.limequery.com/admin/remotecontrol",
+    "myusername",
+    "mypassword",
+)
+
+for survey in client.list_surveys():
+    print(survey["surveyls_title"])
+```
+
+
 Current build status
 ====================
 
