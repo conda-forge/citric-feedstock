@@ -1,6 +1,6 @@
 {% set name = "citric" %}
 {% set python_min = "3.10" %}
-{% set version = "2.1.3" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/citric-{{ version }}.tar.gz
-  sha256: d2692019f639d27244a05f135e8d040d137bc5f37d19c090eb1864afd1db69fb
+  sha256: fdddc22dc23889ab02e92c67ceace8401d182d4739fc418da5220e2de150e4b3
 
 build:
   noarch: python
