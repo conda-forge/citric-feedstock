@@ -29,11 +29,22 @@ requirements:
 test:
   imports:
     - citric
+  source_files:
+    - pyproject.toml
+    - tests
   commands:
     - pip check
+    # Integration tests need a live LimeSurvey instance (docker compose)
+    - pytest tests --ignore=tests/integration
   requires:
     - pip
     - python {{ python_min }}
+    - pytest >=9
+    - httpx2
+    - packaging
+    - pytest-httpserver
+    - python-dotenv
+    - tinydb
 
 about:
   home: https://github.com/edgarrmondragon/citric
